@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PokemonGo Signup Sheet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="css/india.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xwZh5e/w6X9WEpL6MIwJFrDB9iFCowLdYbp8fLz1jYyo9ZkL6qgefYR9Slo23j5f8C5Kcf3TDPbmhJ7oB5YqZ6WA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<div id="entireHeader">
+      <div id="intro-panel">
+        <div id="intro-block">
+          <h1>Aditya Balyan<br /></h1>
+          <h2>CIS 376-Fall 2023</h2>
+        </div>
+      </div> 
+      <nav class="navbar navbar-expand-lg navbar-inverse">
+        <div id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="#">Home</a>
+            <a class="nav-item nav-link" href="">NuChecker</a>
+            <a class="nav-item nav-link" href="" target="_blank">Github</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+<body>
+<nav class="navbar bg-dark navbar-dark navbar-expand-sm sticky-top">
+    <p class="navbar-brand ps-3">PokemonGo Signup Sheet</p>
+    <ul class="navbar-nav">
+    </ul>
+	<ul class="navbar-nav ms-auto">
+    <li class="nav-item"><button class="btn btn-outline-light" onclick="signUpWith('google')"><img src="img/google-icon.png" alt="Google Icon"></button></li>
+    <li class="nav-item"><button class="btn btn-outline-light" onclick="signUpWith('apple')"><img src="img/apple-icon.png" alt="Apple Icon"></button></li>
+    <li class="nav-item"><button class="btn btn-outline-light" onclick="signUpWith('twitch')"><img src="img/twitch-icon.png" alt="Twitch Icon"></button></li>
+    <li class="nav-item"><button class="btn btn-outline-light" onclick="signUpWith('xbox')"><img src="img/xbox-icon.png" alt="Xbox Icon"></button></li>
+    <li class="nav-item"><button class="btn btn-outline-light" onclick="signUpWith('facebook')"><img src="img/facebook-icon.png" alt="Facebook Icon"></button></li>
+</ul>
+
+</nav> 
+
+    <div class="container-fluid">
+        <!--   first row -->
+
+        <div class="row p-1.5 m-1.5">
+
+            <!--   no spaces blur  -->
+            <div class="col-md-5 card">
+                <div class="card-body">
+                    <h4 class="card-title">Question #1</h4>
+                    <label for="noSpaces" class="form-label">What is your UserName? (no spaces)</label>
+                    <input id="noSpaces" class="form-control" type="text" placeholder="Enter UserName (no spaces)" name="noSpaces">
+                    <!-- this is where the validation will appear, the .next() dom object <p> -->
+                    <p class="card-footer"></p>
+                </div>
+                <p></p>
+            </div>
+			
+
+            <!-- only numbers keyup (or keydown)   -->
+            <div class="col-md-5 m-l-2 card">
+                <div class="card-body">
+
+                    <h4 class="card-title">Question #2</h4>
+                    <label for="noAlpha" class="form-label">What is your UserID? (Numbers Only)</label>
+                    <input id="noAlpha" class="form-control" type="text" placeholder="Enter UserID (only numbers)" name="noAlpha">
+                    <!-- this is where the validation will appear, the .next() dom object <p> -->
+                    <p class="card-footer"></p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- second row -->
+        <div class="row">
+            <div class="col-md-5 offset-md-1 card">
+                <div class="card-body">
+
+                    <h4 class="card-title">Question #3</h4>
+                    <label for="noNumbers" class="form-label">What is your name? (No numbers)</label>
+                    <input id="noNumbers" class="form-control" type="text" placeholder="Enter Your Name (no numbers)" name="noNumbers">
+                    <!-- this is where the validation will appear, the .next() dom object <p> -->
+                    <p class="card-footer"></p>
+
+                </div>
+            </div>
+            
+            <div class="col-md-5 offset-md-1 card">
+                <div class="card-body">
+
+                    <h4 class="card-title">Question #4</h4>
+                    <h5>one input => to another</h5>
+
+                    <label for="petKind" class="form-label">What is your prefered role? (Select one)</label>
+                    <select id="petKind" class="form-select" type="select" name="petName">
+          <option value="" disabled selected>Select your option</option>
+          <option value="tank">Tank</option>
+          <option value="dps">DPS</option>
+          <option value="support">Healer</option>
+        </select>
+                    <hr />
+                    <label for="petName" class="form-label">Pick your "main" character.</label>
+                    <select id="petName" class="form-select" type="select" name="petName" disabled>
+          <option>☝🏼select prefered role first</option>
+        </select>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-2 offset-md-5">
+                <button id="submitButton" class="btn btn-primary" type="submit">Submit your Form!</button>
+            </div>
+        </div>
+
+
+
+        <!--   ends row container -->
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src="scripts/india.js"></script>
+    <script src="scripts/ajax.js"></script>
+
+</body>
+
+</html>
